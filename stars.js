@@ -1,6 +1,8 @@
 /* Lightweight drifting stars. No libraries or external assets needed. */
 (() => {
   const canvas = document.getElementById('starfield');
+  if (!canvas) return;
+  const color = document.body.classList.contains('light-universe') ? '0, 0, 0' : '218, 231, 255';
   const context = canvas.getContext('2d');
   if (!context) return;
   const button = document.getElementById('star-motion');
@@ -21,7 +23,7 @@
       if (star.x > width + 2) star.x = -2;
       context.beginPath();
       context.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
-      context.fillStyle = `rgba(218, 231, 255, ${star.alpha})`;
+      context.fillStyle = `rgba(${color}, ${star.alpha})`;
       context.fill();
     }
   }
