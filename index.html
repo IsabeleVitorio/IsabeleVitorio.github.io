@@ -36,9 +36,12 @@
       integrity="sha512-KlJCpRsLf+KKu2VQa5vmRuClRFjxc5lXO03ixZt82HZUk41+1I0bD8KBSA0fY290ayMfWYI9udIqeOWSu1/uZg=="
       crossorigin="anonymous"
     />
+    <script src="stars.js" defer></script>
   </head>
 
-  <body>
+  <body class="universe">
+    <canvas id="starfield" aria-hidden="true"></canvas>
+    <button id="star-motion" type="button" hidden>Pause stars</button>
     <section id="content">
       <!-- Avatar image -->
       <img src="image.jpg" alt="Carl Barks" class="avatar" />

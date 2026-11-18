@@ -53,3 +53,47 @@ a:hover {
 .icons a:hover {
     color: #1565c0;
 }
+
+/* Homepage universe: the existing content and About page keep their layout. */
+body.universe {
+    background: #070b16;
+    color: #e8edf5;
+}
+.universe #starfield {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+.universe a { color: #91bff3; }
+.universe a:hover { color: #c7e1ff; }
+.universe #content { text-shadow: 0 1px 8px #070b16; }
+#star-motion {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    z-index: 1;
+    border: 1px solid #455064;
+    border-radius: 20px;
+    padding: 7px 12px;
+    background: #070b16;
+    color: #b6c1d2;
+    font: inherit;
+    font-size: 12px;
+    cursor: pointer;
+}
+.universe a:focus-visible, #star-motion:focus-visible {
+    outline: 2px solid #91bff3;
+    outline-offset: 5px;
+}
+@media (max-height: 650px) {
+    .universe #content {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        margin: 24px auto 60px;
+    }
+}
